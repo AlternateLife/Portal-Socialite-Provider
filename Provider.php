@@ -15,6 +15,11 @@ class Provider extends AbstractProvider
     /**
      * {@inheritdoc}
      */
+    protected $scopeSeparator = ' ';
+
+    /**
+     * {@inheritdoc}
+     */
     protected $scopes = [];
 
     /**
@@ -24,7 +29,8 @@ class Provider extends AbstractProvider
     {
         return $this->buildAuthUrlFromBase(
             'https://portal.alternate-life.de/oauth/authorize',
-            $state);
+            $state
+        );
     }
 
     /**
