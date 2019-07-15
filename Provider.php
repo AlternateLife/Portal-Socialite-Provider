@@ -78,6 +78,7 @@ class Provider extends AbstractProvider
     {
         $response = $this->getHttpClient()->get('https://portal.alternate-life.de/api/user', [
             'headers' => [
+                'Accept' => 'application/json',
                 'Authorization' => 'Bearer ' . $token,
             ],
         ]);
